@@ -19,14 +19,6 @@ export default defineConfig(({mode}) => {
       sourcemap: false,
       chunkSizeWarningLimit: 1000,
       minify: 'esbuild',
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'three': ['three'],
-            'react-three': ['@react-three/fiber', '@react-three/drei'],
-          },
-        },
-      },
     },
     server: {
       // Enable HMR by default, but allow disabling via environment variable.

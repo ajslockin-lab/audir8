@@ -1,0 +1,7 @@
+[build]
+  command = "npx vite build"
+  publish = "dist"
+
+[build.environment]
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  VITE_BUILD_MINIFY = "true"
