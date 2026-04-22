@@ -6,7 +6,7 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [react({ swcMinify: false }), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
@@ -18,6 +18,15 @@ export default defineConfig(({mode}) => {
     build: {
       sourcemap: false,
       chunkSizeWarningLimit: 1000,
+      minify: 'esbuild',
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'three': ['three'],
+            'react-three': ['@react-three/fiber', '@react-three/drei'],
+          },
+        },
+      },
     },
     server: {
       // Enable HMR by default, but allow disabling via environment variable.
