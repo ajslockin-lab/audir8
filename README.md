@@ -2,19 +2,53 @@
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# Audi R8 Experience
 
-This contains everything you need to run your app locally.
+An interactive 3D web experience showcasing the legendary Audi R8 V10. Built with React, Framer Motion, and Google Model Viewer.
 
-View your app in AI Studio: https://ai.studio/apps/4e6f3a77-c5f0-47ae-844f-384478c7eb15
+## Getting Started
 
-## Run Locally
+Follow these steps to run the project locally on your machine.
 
-**Prerequisites:**  Node.js
+### Prerequisites
 
+- [Node.js](https://nodejs.org/) (v18.0.0 or higher)
+- npm (comes with Node.js)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ajslockin-lab/audir8.git
+   cd audir8
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+### Development
+
+Start the development server:
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`.
+
+### Building for Production
+
+To create an optimized production build:
+```bash
+npm run build
+```
+
+The output will be in the `dist/` directory.
+
+## Features
+
+- **Interactive 3D Model**: High-fidelity R8 model with 360° rotation and zoom.
+- **Scroll-Scrubbed Video**: Cinematic video background synchronized with your scroll progress.
+- **Responsive Design**: Optimized for desktop and mobile viewing.
+- **Premium Aesthetics**: Dark-themed UI with smooth GSAP and Framer Motion animations.
