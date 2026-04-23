@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Gauge, Shield, Wind } from 'lucide-react';
 import { motion, useScroll, useTransform, useSpring } from 'motion/react';
 import gsap from 'gsap';
-import ScrollReveal from './components/ScrollReveal';
 import GoogleModelViewer from './components/GoogleModelViewer';
 
 function Reveal({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) {
